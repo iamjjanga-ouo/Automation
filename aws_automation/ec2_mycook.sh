@@ -39,7 +39,7 @@ function ec2_stop() {
 
   read -p "input stopped instance-id : " stopped_instance_id
 
-  aws ec2 stop-instances --instance-ids $stopped_instance_id
+  aws ec2 stop-instances --instance-ids $stopped_instance_id --no-cli-pager
 
   unset stopped_instance_id
 }
